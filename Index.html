@@ -1,0 +1,45 @@
+
+#include <stdio.h>
+
+#define MAX_ELEMENTS 10
+
+int main() {
+    int array[MAX_ELEMENTS];
+    int i, index, value;
+
+    // Initialize array with values
+    for (i = 0; i < MAX_ELEMENTS; i++) {
+        array[i] = i * 10;
+    }
+
+    // Display array elements
+    printf("Array elements:\n");
+    for (i = 0; i < MAX_ELEMENTS; i++) {
+        printf("array[%d] = %d\n", i, array[i]);
+    }
+
+    // Get index and value from user
+    printf("Enter index (0-%d): ", MAX_ELEMENTS - 1);
+    scanf("%d", &index);
+
+    printf("Enter value: ");
+    scanf("%d", &value);
+
+    // Check if index is valid
+    if (index >= 0 && index < MAX_ELEMENTS) {
+        // Assign value to array element
+        array[index] = value;
+
+        // Display updated array elements
+        printf("Updated array elements:\n");
+        for (i = 0; i < MAX_ELEMENTS; i++) {
+            printf("array[%d] = %d\n", i, array[i]);
+        }
+    } else {
+        printf("Invalid index!\n");
+    }
+
+    return 0;
+}
+```
+
